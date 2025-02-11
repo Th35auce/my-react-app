@@ -1,16 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+
 
 function App() {
-  const num = Math.abs(10)
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
+  const handleNameChangeEvent = (event) => {
+    setName(event.target.value);
+    console.log(event.target.value);
+  }
+
+  const handleEmailChangeEvent = (event) => {
+    setEmail(event.target.value);
+    console.log(event.target.value);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {name}
         </p>
-        <div>{num}</div>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -19,6 +32,18 @@ function App() {
         >
           Learn React
         </a>
+        <input
+          id='1'
+          type='test'
+          placeholder='Name'
+          onChange={handleNameChangeEvent}
+        />
+        <input
+          id='1'
+          type='test'
+          placeholder='Email'
+          onChange={handleEmailChangeEvent}
+        />
       </header>
     </div>
   );
