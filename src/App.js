@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const num = Math.abs(10)
   return (
     <div className="App">
       <header className="App-header">
@@ -9,6 +10,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <div>{num}</div>
         <a
           className="App-link"
           href="https://reactjs.org"
